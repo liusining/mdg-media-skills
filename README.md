@@ -68,9 +68,6 @@ git clone -b master --single-branch https://github.com/mdark-org/btnews
 │   │   │   │   ├── ...
 │   │   │   ├── 0201_0200   [睡前消息主线 101~200期]
 │   │   │   ├── ...
-│   │   ├── refnews  [参考信息]
-│   │   ├── opinion  [高见]
-│   │   ├── commercial [讲点黑话]
 │   │   ├── ...
 │   ├── (namespace name) 
 ├── images [存储图片内容]
