@@ -22,8 +22,9 @@
 
 | 转折点 | 触发位置/内容 | 为什么是不可删除转折 | 作用 |
 |---|---|---|---|
-| T1 | {{t1_source}} | {{t1_reason}} | {{t1_function}} |
-| T2 | {{t2_source}} | {{t2_reason}} | {{t2_function}} |
+{{turnpoint_rows}}
+
+<!-- turnpoint_rows 填写规则：0 个转折时写一行“| 无不可删除转折 | - | - | - |”；1 个转折只写 T1；2 个转折写 T1/T2；3 个及以上继续写 T3/T4...。不要为了标准模型补造或合并转折。 -->
 
 - 转折点数量：{{turnpoint_count}}
 - 逻辑深度判断：{{logic_depth_level}}
