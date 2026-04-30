@@ -18,3 +18,7 @@ yarn-error.log
 .vercel
 .secrets
 sample.event
+.agents/
+skills-lock.json
+__pycache__/
+*.pyc
