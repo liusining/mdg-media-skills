@@ -18,8 +18,6 @@ metadata:
 
 1. `references/writing-method.md`：用于叙事拆解、A/B/C/D 分类、二维逻辑图、一维化叙事、过渡段判断。
 2. `references/topic-selection-method.md`：用于选题原则、逻辑深度、三段叙事 + 两次转折、叙事结构切换次数判断。
-3. `assets/analysis-report-template.md`：用于最终报告格式。
-4. 可选：`references/search-method.md` 只在用户明确要求分析“搜索/资料组织方法”时加载；默认不要使用。
 
 ## 输入要求
 
@@ -172,7 +170,9 @@ flowchart TD
 
 ### Step 8 — 写入源文件同目录下的 Markdown 报告
 
-输出文件必须写到源 Markdown 文件所在的同一个目录，除非用户明确指定输出路径。不要默认写入当前工作目录。
+加载 `assets/analysis-report-template.md` 作为报告模板。
+
+输出文件必须写到源 Markdown 文件所在的同一个目录，除非用户明确指定输出路径。
 
 默认文件名：
 
