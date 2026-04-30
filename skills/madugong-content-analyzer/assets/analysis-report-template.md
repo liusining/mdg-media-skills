@@ -1,7 +1,5 @@
 # 马督工方法论内容分析报告：{{article_title}}
 
-- 源文件：`{{input_path}}`
-- 输出文件：`{{output_path}}`
 - 分析时间：{{analysis_time}}
 - 发现选题数：{{topic_count}}
 - 实际分析选题：{{selected_topic}}
