@@ -42,25 +42,18 @@
 
 ---
 
-## 4. 二维逻辑关系与一维化叙事
+## 4. 叙事结构模式
 
-### 4.1 二维逻辑关系
+{{structure_mode}}
 
-{{two_dimensional_logic}}
-
-### 4.2 一维叙事线
-
-{{linear_narrative}}
-
-### 4.3 结构模式与切换次数
-
-- 结构模式：{{structure_mode}}
-- 结构切换次数：{{structure_switch_count}}
-- 是否符合“半棵树”要求：{{half_tree_judgement}}
+<!-- structure_mode 写一句话，同时说明基本模式（并列 / 因果）以及模式切换情况。例如：
+"因果，主线无切换。"
+"因果→并列，切换 1 次：先做归因，再用三组案例并列补强。"
+"并列→因果→并列，切换 2 次，结构略复杂。" -->
 
 ---
 
-## 5. Mermaid 叙事结构图
+## 5. 一维叙事结构图
 
 ```mermaid
 {{mermaid_graph}}
