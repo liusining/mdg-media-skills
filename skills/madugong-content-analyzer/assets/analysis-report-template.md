@@ -28,7 +28,6 @@
 
 - 转折点数量：{{turnpoint_count}}
 - 逻辑深度判断：{{logic_depth_level}}
-- 性价比判断：{{cost_performance_judgement}}
 
 ---
 
@@ -49,7 +48,8 @@
 <!-- structure_mode 写一句话，同时说明基本模式（并列 / 因果）以及模式切换情况。例如：
 "因果，主线无切换。"
 "因果→并列，切换 1 次：先做归因，再用三组案例并列补强。"
-"并列→因果→并列，切换 2 次，结构略复杂。" -->
+"并列→因果→并列，切换 2 次，结构略复杂。"
+"并列→因果→并列→因果，切换 3 次以上：素材复杂，需要简化或拆题。" -->
 
 ---
 
@@ -89,7 +89,6 @@
 | 是否绕开完美故事 | {{perfect_story_result}} | {{perfect_story_reason}} |
 | 是否避免纯反驳 | {{rebuttal_result}} | {{rebuttal_reason}} |
 | 转折点数量是否合适 | {{turnpoint_suitability}} | {{turnpoint_suitability_reason}} |
-| 结构切换是否过多 | {{structure_switch_suitability}} | {{structure_switch_reason}} |
 
 ---
 

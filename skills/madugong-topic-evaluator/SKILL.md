@@ -20,12 +20,6 @@ aliases:
   - content-topic-evaluator
   - media-topic-evaluation
 description: Evaluate whether a proposed media topic is worth developing using 马督工自媒体选题方法论. Use when the user gives a topic idea and asks whether it is worth doing, how to frame it, whether it fits topic-selection principles, or wants a structured topic diagnosis. The skill must search the web, restate the topic as common information field + latest change + action advice, wait for user confirmation, then evaluate it against eight topic directions and negative-selection criteria.
-metadata:
-  pattern: pipeline+inversion+tool-wrapper+reviewer+generator
-  interaction: multi-turn
-  requires: web-search
-  output-format: structured-markdown
-  language: zh-CN
 ---
 
 # 马督工选题判断 Skill

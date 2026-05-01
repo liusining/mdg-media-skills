@@ -1,23 +1,11 @@
 ---
 name: madugong-content-analyzer
 description: Analyze a local Markdown article using 马督工自媒体写作与选题方法论. Use when the user asks to analyze narrative logic, topic logic, transition points, logic depth, Mermaid narrative structure, or why a topic was selected.
-metadata:
-  pattern: pipeline+reviewer+generator+inversion
-  input: local-markdown-only
-  output: markdown-report
-  language: zh-CN
 ---
 
 # 马督工内容分析 Skill
 
-你是一个自媒体内容分析助手。你的任务是读取本地 Markdown 文章，按照马督工自媒体写作方法和选题方法论，分析其中一个选题的叙事逻辑、逻辑深度、叙事结构和选题成立原因，并把分析结果写入源 Markdown 文件所在目录下的另一个 Markdown 文件。
-
-## 必须加载的参考资料
-
-在开始分析前，只加载以下本 Skill 内部参考资料，不要访问互联网，不要抓取文章中的外部链接：
-
-1. `references/writing-method.md`：用于叙事拆解、A/B/C/D 分类、一维化叙事、过渡段判断。文件中关于「二维逻辑路线图」的内容只作为理解写作方法论的背景，不写进分析报告。
-2. `references/topic-selection-method.md`：用于选题原则、逻辑深度、三段叙事 + 两次转折、叙事结构切换次数判断。
+你是一个自媒体内容分析助手。你的任务是读取本地 Markdown 文章，按照马督工自媒体写作方法和选题方法论，分析其中一个选题的叙事逻辑、逻辑深度、叙事结构和选题成立原因，并把分析结果写入报告。
 
 ## 输入要求
 
@@ -31,7 +19,7 @@ metadata:
 python <skill_dir>/scripts/validate_local_markdown.py <input_path>
 ```
 
-如果无法运行脚本，可以直接按允许本地文件的原则手动验证。
+如果无法运行脚本，也可以手动验证。
 
 ## 总体工作流
 
@@ -49,7 +37,7 @@ python <skill_dir>/scripts/validate_local_markdown.py <input_path>
 
 先判断文章中包含几个**可独立成篇的选题**，不要直接按标题数量计数。
 
-一个被发现的内容只有同时满足以下多数条件，才算独立选题：
+一部分内容只有同时满足以下多数条件，才算独立选题：
 
 - 有独立的中心问题，能用一句话概括。
 - 有独立的事实材料和因果链。
@@ -72,6 +60,8 @@ python <skill_dir>/scripts/validate_local_markdown.py <input_path>
 - 如果用户已经指定了选题编号、标题或中心问题：只分析该选题，忽略其他选题。
 
 ### Step 3 — 拆解叙事单元
+
+加载 `references/writing-method.md`，作为 A/B/C/D 类型定义、一维化叙事方法、过渡段判断的依据。文件中关于「二维逻辑路线图」的内容只作为方法论背景，不写进分析报告。
 
 只对选中的一个选题操作。
 
@@ -98,12 +88,27 @@ python <skill_dir>/scripts/validate_local_markdown.py <input_path>
 - 不得为了贴合“三段叙事 + 两次转折”的标准模型，补造、合并、拆分、压缩或省略实际转折点。
 - 如果实际没有不可删除转折点，压缩总结不写 `[Tn]` 标记，并在转折点表格中写“无不可删除转折”。
 
+不计入的转折信号：
+
+- 时间推进：后来、然后、接着。
+- 举例切换：比如、另外、再看。
+- 普通让步：虽然辛苦但仍然辛苦。
+- 主持人为了推进节目而提出的新问题。
+
+计入的转折信号：
+
+- 表层判断被推翻。
+- 责任主体被重新定位。
+- 问题从个案变成结构。
+- 问题从批判对象转向解决方案。
+- 解决方案被反转为另一个更可执行方案。
+
 逻辑深度判断：
 
 - 0 个转折：信息通报/流水账，不适合作为深度选题。
 - 1 个转折：有分析，但和普通读者思考距离不大，可按简讯或短评处理。
 - 2 个转折：标准模型，传播性价比较高。
-- 3 个及以上：逻辑深，但传播成本和误差风险上升；应考虑拆题、合并转折或简化主线。
+- 3 个及以上：逻辑深，但传播成本和误差风险上升。
 
 ### Step 5 — 还原一维叙事线
 
@@ -119,12 +124,17 @@ python <skill_dir>/scripts/validate_local_markdown.py <input_path>
 
 ### Step 6 — 判断叙事结构模式
 
-参考 `references/topic-selection-method.md` 第 2 节"叙事结构切换次数"，根据 Step 5 还原出的一维叙事线，判断两件事：
+根据 Step 5 还原出的一维叙事线，判断两件事：
 
 1. 主线用的是哪种基本模式：并列（第一点、第二点）还是因果（先因后果或倒叙）。
 2. 在主线推进过程中是否切换了模式、切换了几次。
 
-输出一句话同时说清楚模式和切换次数，例如"因果"（不切换）、"因果→并列"（切换 1 次）、"并列→因果→并列"（切换 2 次）。
+输出一句话同时说清楚模式和切换次数，并附简短解释。例如：
+
+- "因果，主线无切换。"
+- "因果→并列，切换 1 次：先做归因，再用三组案例并列补强。"
+- "并列→因果→并列，切换 2 次，结构略复杂。"
+- "并列→因果→并列→因果，切换 3 次以上：素材复杂，需要简化或拆题。"
 
 ### Step 7 — 生成一维叙事结构图
 
@@ -151,6 +161,8 @@ flowchart TD
 - 如果存在并列材料，用分支汇入主线，不要画成无关散点。
 
 ### Step 8 — 分析“为什么这个选题会被确定下来”
+
+加载 `references/topic-selection-method.md`，作为选题本质三要素、八个选题方向的详细定义、否定选题校验口径的依据。
 
 按选题方法论判断选题成立原因。
 
