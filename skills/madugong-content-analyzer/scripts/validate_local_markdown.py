@@ -48,18 +48,18 @@ def main() -> None:
     if not os.access(path, os.R_OK):
         fail(f"文件不可读：{path}")
 
-    cwd = Path.cwd().resolve()
     stem = path.stem
-    candidate = cwd / f"{stem}.madugong-analysis.md"
+    output_dir = path.parent
+    candidate = output_dir / f"{stem}.madugong-analysis.md"
     i = 2
     while candidate.exists() or candidate.resolve() == path:
-        candidate = cwd / f"{stem}.madugong-analysis-{i}.md"
+        candidate = output_dir / f"{stem}.madugong-analysis-{i}.md"
         i += 1
 
     print(json.dumps({
         "ok": True,
         "input_path": str(path),
-        "current_directory": str(cwd),
+        "output_directory": str(output_dir),
         "suggested_output_path": str(candidate),
     }, ensure_ascii=False, indent=2))
 
