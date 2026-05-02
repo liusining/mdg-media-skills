@@ -4,7 +4,7 @@ import { readdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import process from "node:process";
 
-const DEFAULT_ROOT = "docs/btnews/btnews";
+const DEFAULT_ROOT = "btnews";
 
 const usage = `Usage: node scripts/remove-btnews-ads.mjs [--write] [--check] [--root <dir>]
 

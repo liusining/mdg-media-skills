@@ -15,7 +15,7 @@ const title2filepath = (title) => {
   if(index.endsWith('.5')) {
     indexStr = indexStr + "_5"
   }
-  return `docs/btnews/btnews/${range}/btnews_${indexStr}.md`
+  return `btnews/${range}/btnews_${indexStr}.md`
 }
 
 export const listen = function(data) {

@@ -8,7 +8,7 @@ node_modules
 docs/.vuepress/dist
 .yarn
 backup
-# docs/btnews/*
+# btnews/*
 yarn-error.log
 .DS_Store
 .env
