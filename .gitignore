@@ -22,3 +22,4 @@ sample.event
 skills-lock.json
 __pycache__/
 *.pyc
+CLAUDE.md
