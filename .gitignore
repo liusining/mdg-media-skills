@@ -19,6 +19,7 @@ yarn-error.log
 .secrets
 sample.event
 .agents/
+.claude/
 skills-lock.json
 __pycache__/
 *.pyc

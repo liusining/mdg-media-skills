@@ -19,10 +19,10 @@
 在本仓库根目录运行：
 
 ```bash
-npx --yes skills@latest add ./skills -g --all
+npx --yes skills@latest add ./skills --all
 ```
 
-这会从 `skills/` 把本仓库提供的两个 Skill 全局安装给所有支持的 agents，默认使用 symlink。
+这会从 `skills/` 安装本仓库提供的两个 Skill。
 
 ## 关键位置
 
