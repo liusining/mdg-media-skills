@@ -16,10 +16,10 @@
 
 近期分析报告：
 
-- [第 1055 期 · 高铁涨价可以，拿京沪二线来换](btnews/1001_1100/btnews_1055.madugong-analysis.md)
-- [第 1056 期 · 3万吨黄金 挡不住AI危机](btnews/1001_1100/btnews_1056.madugong-analysis.md)
-- [第 1057 期 · CNN创始人特纳去世 直播产业的祖师走了](btnews/1001_1100/btnews_1057.madugong-analysis.md)
 - [第 1058 期 · 无产阶级争AI红利 韩国人不支持](btnews/1001_1100/btnews_1058.madugong-analysis.md)
+- [第 1057 期 · CNN创始人特纳去世 直播产业的祖师走了](btnews/1001_1100/btnews_1057.madugong-analysis.md)
+- [第 1056 期 · 3万吨黄金 挡不住AI危机](btnews/1001_1100/btnews_1056.madugong-analysis.md)
+- [第 1055 期 · 高铁涨价可以，拿京沪二线来换](btnews/1001_1100/btnews_1055.madugong-analysis.md)
 
 ## 安装 Skill
 
