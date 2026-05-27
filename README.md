@@ -5,9 +5,9 @@
 - `madugong-content-analyzer`：分析本地 Markdown 文章的叙事结构、逻辑深度和选题成立原因。
 - `madugong-topic-evaluator`：判断一个自媒体选题是否值得做，并给出重构建议。
 
-## 直接看现成的分析报告
+## 已有分析报告
 
-现成报告与原文同目录，仅文件名后缀不同：
+已有报告与原文同目录，仅文件名后缀不同：
 
 | 类型 | 路径 |
 |---|---|
@@ -37,6 +37,10 @@ npx --yes skills@latest add ./skills --all
 ```
 
 这会从 `skills/` 安装本仓库提供的两个 Skill。
+
+```
+/madugong-content-analyzer 分析 1058 期
+```
 
 ## 关键位置
 
