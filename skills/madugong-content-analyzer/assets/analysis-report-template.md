@@ -68,7 +68,7 @@
 1. 节点数 == Section 3 单元数；节点 ID 直接用单元编号（纯数字 1, 2, 3, ...）。
 2. 节点标签格式："<编号> · <类型> · <一句话单元概括>"。
 3. 形状与配色映射，每个节点都要在形状后套用对应 class：叙述用 `["..."]:::typeA`，逻辑用 `[/"..."/]:::typeB`，点缀用 `["..."]:::typeC`，转折用 `{{"..."}}:::typeD`。
-4. 在图开头声明下面四个 classDef（未用到的类型保留也无妨）。每个 class 都显式设了文字色 `color:`，以保证在 GitHub 明暗两种主题下文字与填充都不撞色：
+4. 在图开头声明下面全部四个 classDef，原样照抄、逐字不改；即便本篇某类型没有出现，对应 classDef 也必须保留，不得删减。每个 class 都显式设了文字色 `color:`，文字与填充在 GitHub 明暗两种主题下都不撞色：
        classDef typeA fill:#e0f2fe,stroke:#0284c7,color:#0c4a6e
        classDef typeB fill:#dcfce7,stroke:#16a34a,color:#14532d
        classDef typeC fill:#f3f4f6,stroke:#9ca3af,color:#374151,stroke-dasharray:5 5

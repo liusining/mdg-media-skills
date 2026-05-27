@@ -223,6 +223,7 @@ btnews_1042.madugong-analysis.md
 - [ ] 转折点数量、转折点表格行数、Mermaid 中六边形（转折）节点数与逻辑深度判断一致。
 - [ ] Section 3 单元数与 Mermaid 节点数一一对应，每个单元都在图中。
 - [ ] 节点形状与配色与单元类型匹配，且每个节点都套用了对应 class：叙述 = 蓝色矩形（typeA）、逻辑 = 绿色平行四边形（typeB）、点缀 = 灰色矩形 + 虚线（typeC）、转折 = 琥珀色六边形（typeD）。
+- [ ] 图开头声明了全部四个 classDef；带 `:::typeX` 的节点数等于 Section 3 单元数，没有任何节点漏套 class（漏套的节点在 GitHub 暗色主题下会塌进背景）。
 - [ ] Mermaid 主线从起点到终点连通。
 - [ ] 选题分析覆盖三要素、八方向匹配、否定选题校验。
 - [ ] 报告已写入源 Markdown 文件所在目录下的新 Markdown 文件。
