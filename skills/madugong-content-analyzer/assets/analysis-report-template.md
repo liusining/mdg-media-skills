@@ -58,7 +58,7 @@
 
 ## 5. 一维叙事结构图
 
-节点形状对应单元类型：叙述 = 矩形 `[ ]`，逻辑 = 平行四边形 `[/ /]`，点缀 = 矩形 + 虚线边框，转折 = 六边形 `{{ }}`。节点编号与 Section 3 单元一一对应。
+节点形状与颜色对应单元类型：叙述 = 蓝色矩形 `[ ]`，逻辑 = 绿色平行四边形 `[/ /]`，点缀 = 灰色矩形 + 虚线边框，转折 = 琥珀色六边形 `{{ }}`。节点编号与 Section 3 单元一一对应。
 
 ```mermaid
 {{mermaid_graph}}
@@ -67,8 +67,12 @@
 <!-- mermaid_graph 填写规则：
 1. 节点数 == Section 3 单元数；节点 ID 直接用单元编号（纯数字 1, 2, 3, ...）。
 2. 节点标签格式："<编号> · <类型> · <一句话单元概括>"。
-3. 形状映射：叙述用 `["..."]`，逻辑用 `[/"..."/]`，点缀用 `["..."]:::typeC`，转折用 `{{"..."}}`。
-4. 在图开头声明 `classDef typeC stroke-dasharray:5 5` 让点缀节点显示虚线边框。
+3. 形状与配色映射，每个节点都要在形状后套用对应 class：叙述用 `["..."]:::typeA`，逻辑用 `[/"..."/]:::typeB`，点缀用 `["..."]:::typeC`，转折用 `{{"..."}}:::typeD`。
+4. 在图开头声明下面四个 classDef（未用到的类型保留也无妨）。每个 class 都显式设了文字色 `color:`，以保证在 GitHub 明暗两种主题下文字与填充都不撞色：
+       classDef typeA fill:#e0f2fe,stroke:#0284c7,color:#0c4a6e
+       classDef typeB fill:#dcfce7,stroke:#16a34a,color:#14532d
+       classDef typeC fill:#f3f4f6,stroke:#9ca3af,color:#374151,stroke-dasharray:5 5
+       classDef typeD fill:#fef3c7,stroke:#d97706,color:#78350f
 5. 转折节点标签内继续标注"转折1"、"转折2"，与 Section 2 的转折点编号一致。
 6. 主线必须从起点连到终点；并列分支也要画进图，最终汇入主线。
 -->

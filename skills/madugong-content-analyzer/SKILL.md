@@ -144,14 +144,17 @@ python <skill_dir>/scripts/validate_local_markdown.py <input_path>
 
 ```mermaid
 flowchart TD
-    classDef typeC stroke-dasharray:5 5
+    classDef typeA fill:#e0f2fe,stroke:#0284c7,color:#0c4a6e
+    classDef typeB fill:#dcfce7,stroke:#16a34a,color:#14532d
+    classDef typeC fill:#f3f4f6,stroke:#9ca3af,color:#374151,stroke-dasharray:5 5
+    classDef typeD fill:#fef3c7,stroke:#d97706,color:#78350f
 
-    1["1 · 叙述 · 起点事实"]
-    2[/"2 · 逻辑 · 第一层解释"/]
+    1["1 · 叙述 · 起点事实"]:::typeA
+    2[/"2 · 逻辑 · 第一层解释"/]:::typeB
     3["3 · 点缀 · 趣味细节"]:::typeC
-    4{{"4 · 转折1 · 不可删除转折"}}
-    5[/"5 · 逻辑 · 转折后解释"/]
-    6[/"6 · 逻辑 · 结论 / 建议"/]
+    4{{"4 · 转折1 · 不可删除转折"}}:::typeD
+    5[/"5 · 逻辑 · 转折后解释"/]:::typeB
+    6[/"6 · 逻辑 · 结论 / 建议"/]:::typeB
 
     1 --> 2 --> 3 --> 4 --> 5 --> 6
 ```
@@ -219,7 +222,7 @@ btnews_1042.madugong-analysis.md
 - [ ] 如果存在不可删除转折，带转折点总结包含对应 `[Tn]` 标记；如果不存在，已明确写“无不可删除转折”。
 - [ ] 转折点数量、转折点表格行数、Mermaid 中六边形（转折）节点数与逻辑深度判断一致。
 - [ ] Section 3 单元数与 Mermaid 节点数一一对应，每个单元都在图中。
-- [ ] 节点形状与单元类型匹配：叙述 = 矩形、逻辑 = 平行四边形、点缀 = 矩形 + 虚线、转折 = 六边形。
+- [ ] 节点形状与配色与单元类型匹配，且每个节点都套用了对应 class：叙述 = 蓝色矩形（typeA）、逻辑 = 绿色平行四边形（typeB）、点缀 = 灰色矩形 + 虚线（typeC）、转折 = 琥珀色六边形（typeD）。
 - [ ] Mermaid 主线从起点到终点连通。
 - [ ] 选题分析覆盖三要素、八方向匹配、否定选题校验。
 - [ ] 报告已写入源 Markdown 文件所在目录下的新 Markdown 文件。
