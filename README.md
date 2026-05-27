@@ -7,16 +7,30 @@
 
 ## 直接看现成的分析报告
 
-如果你不想自己跑 Skill，可以直接阅读已经分析好的报告。它们和原文同目录，文件名以 `.madugong-analysis.md` 结尾。例如：
+现成报告与原文同目录，仅文件名后缀不同：
 
-- [第 1039 期 · 政治死人柯文哲 被赖清德判活了](btnews/1001_1100/btnews_1039.madugong-analysis.md)
-- [第 1046 期 · 香港禁烟 亏钱又没效](btnews/1001_1100/btnews_1046.madugong-analysis.md)
-- [第 1047 期 · 下个月要体检，赶紧吃排铅药](btnews/1001_1100/btnews_1047.madugong-analysis.md)
-- [第 1049 期 · 湖北考编学院 上海B站赚钱](btnews/1001_1100/btnews_1049.madugong-analysis.md)
+| 类型 | 路径 |
+|---|---|
+| 原文 | `btnews/1001_1100/btnews_1039.md` |
+| 报告 | `btnews/1001_1100/btnews_1039.madugong-analysis.md` |
+
+近期分析报告：
+
+- [第 1055 期 · 高铁涨价可以，拿京沪二线来换](btnews/1001_1100/btnews_1055.madugong-analysis.md)
+- [第 1056 期 · 3万吨黄金 挡不住AI危机](btnews/1001_1100/btnews_1056.madugong-analysis.md)
+- [第 1057 期 · CNN创始人特纳去世 直播产业的祖师走了](btnews/1001_1100/btnews_1057.madugong-analysis.md)
+- [第 1058 期 · 无产阶级争AI红利 韩国人不支持](btnews/1001_1100/btnews_1058.madugong-analysis.md)
 
 ## 安装 Skill
 
-在本仓库根目录运行：
+想自己运行分析工具，先 clone 本仓库：
+
+```bash
+git clone https://github.com/liusining/mdg-media-skills.git
+cd mdg-media-skills
+```
+
+再在仓库根目录安装 Skill：
 
 ```bash
 npx --yes skills@latest add ./skills --all
@@ -43,11 +57,3 @@ btnews/<起始期号>_<结束期号>/btnews_<期号>.md
 - 第 1039 期 → `btnews/1001_1100/btnews_1039.md`
 
 由 `madugong-content-analyzer` 生成的分析报告与原文件同目录，命名为 `btnews_<期号>.madugong-analysis.md`。
-
-## Attribution
-
-本仓库克隆自 [mdark-org/btnews](https://github.com/mdark-org/btnews)。
-
-关于原始文档、部署方式和在线查看方式，请直接访问 upstream 仓库：
-
-- [https://github.com/mdark-org/btnews](https://github.com/mdark-org/btnews)
