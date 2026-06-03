@@ -114,7 +114,7 @@
 
 ---
 
-## 7. 总评
+## 7. AI 总评（供参考）
 
 {{overall_assessment}}
 
