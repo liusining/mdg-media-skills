@@ -16,10 +16,10 @@
 
 近期分析报告：
 
+- [第 1062 期 · 福建泡药杨梅 湖北"割四赔五" 都是一回事](btnews/1001_1100/btnews_1062.madugong-analysis.md)
 - [第 1061 期 · 31省吃中央补贴 谁是优等生？](btnews/1001_1100/btnews_1061.madugong-analysis.md)
 - [第 1060 期 · 地下储能项目 高考出题人的“富矿”](btnews/1001_1100/btnews_1060.madugong-analysis.md)
 - [第 1059 期 · 赖清德撒钱，“台积宝宝”丰收](btnews/1001_1100/btnews_1059.madugong-analysis.md)
-- [第 1058 期 · 无产阶级争AI红利 韩国人不支持](btnews/1001_1100/btnews_1058.madugong-analysis.md)
 
 ## 安装 Skill
 
