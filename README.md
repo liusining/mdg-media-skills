@@ -16,10 +16,10 @@
 
 近期分析报告：
 
+- [第 1066 期 · 老佛爷退出北京 布尔乔亚故事过时了](btnews/1001_1100/btnews_1066.madugong-analysis.md)
 - [第 1065 期 · 网瘾学校在第三层 精神病院是第四层](btnews/1001_1100/btnews_1065.madugong-analysis.md)
 - [第 1064 期 · 西北赛区西安赢 西部赛区成都赢](btnews/1001_1100/btnews_1064.madugong-analysis.md)
 - [第 1063 期 · 大学关门办学，纯属钱多了烧的](btnews/1001_1100/btnews_1063.madugong-analysis.md)
-- [第 1062 期 · 福建泡药杨梅 湖北"割四赔五" 都是一回事](btnews/1001_1100/btnews_1062.madugong-analysis.md)
 
 ## 安装 Skill
 
